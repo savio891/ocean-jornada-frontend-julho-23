@@ -3,3 +3,28 @@
   margin: 0 auto;
 }
 
+.card {
+  border: 1px solid black;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #eee;
+  box-shadow: 4px 4px black;
+  width: 300px;
+  transition: all ease-in-out 200ms;
+}
+
+.card:hover {
+  box-shadow: 4px 4px black;
+  translate: -2px -2px;
+}
+
+.card > h1 {
+  border-left: 8px solid blue;
+  padding-left: 16px;
+}
+
+.card > img {
+  max-width: 100%;
+  border-radius: 16px;
+}
