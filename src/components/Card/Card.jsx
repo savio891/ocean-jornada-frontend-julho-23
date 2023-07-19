@@ -1,7 +1,7 @@
 import "./Card.css";
 
 export default function Card(props) {
-  console.log(props);
+  // console.log(props);
 
   const item = props.item;
 

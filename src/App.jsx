@@ -1,27 +1,27 @@
-import './App.css'
-import Card from './components/Card/Card'
+import "./App.css";
+import Card from "./components/Card/Card";
 
 export const item1 = {
   nome: "Rick Sanchez",
   imagem:
-    "https://static.tvtropes.org/pmwiki/pub/images/abcb6534_7913_4eb1_a7a5_62b081ebc628.png"
-}
+    "https://static.tvtropes.org/pmwiki/pub/images/abcb6534_7913_4eb1_a7a5_62b081ebc628.png",
+};
 
 export const item2 = {
   nome: "Morty Smith",
   imagem:
-    "https://static.wikia.nocookie.net/rickandmorty/images/e/ee/Morty501.png/revision/latest?cb=20210827150137"
-}
+    "https://comicvine.gamespot.com/a/uploads/scale_medium/6/66303/4469088-tumblr_inline_n0aleph3fl1r8rr6o.jpg",
+};
 
 function App() {
   return (
     <>
-      <div className='cards-list'>
-        <Card item={1} />
-        <Card item={2}/>
+      <div className="cards-list">
+        <Card item={item1} />
+        <Card item={item2} />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
