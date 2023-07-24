@@ -1,16 +1,26 @@
+import { useState } from "react";
 import "./Card.css";
+import Tag from "./Tag";
 
 export default function Card(props) {//Lê os atributos que estão no componente Card.
-  //console.log(props);
-
-  const item = props.item; //corresponde ao atributo que armazena as variáveis item1 e item2.
-
-  // console.log(item);
+  
+  const item = props.item; //lê os dados que estão dentro do atributo "item" na tag Card (<Card key={index} item={item})
+  const list = props.list
+  
 
   return (
     <div className="card">
       <h1>{item.nome}</h1>
       <img src={item.imagem} />
+      {
+        list.map((item, index) => {
+          if(index == 0) {
+            return <Tag key={index} item={item}/>
+          }else{
+            return <></>
+          }
+        })
+      }
     </div>
   );
 }

@@ -20,7 +20,10 @@
   }
   
   .card > img {
-    max-width: 100%;
+    padding: 25px;
+    max-width: 80%;
+    max-height: 40%;
     border-radius: 16px;
+    margin-left: 30px;
   }
   

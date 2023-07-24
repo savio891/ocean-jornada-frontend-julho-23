@@ -1,0 +1,12 @@
+.box-information {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag-information {
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    border-radius: 20px;
+    margin: 20px;
+}
