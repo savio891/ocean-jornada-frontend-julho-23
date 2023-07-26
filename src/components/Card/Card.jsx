@@ -10,7 +10,12 @@ export default function Card(props) {//Lê os atributos que estão no componente
     <div className="card">
       <h1>{item.nome}</h1>
       <img src={item.imagem} />
-      <Tag />
+      {
+        list.length > 0 &&
+          list.map((item, index) => {
+            return <Tag key={index} item={item} />
+          })
+      }
     </div> 
   );
 }
