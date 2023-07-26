@@ -18,15 +18,15 @@ function App() {
   }
 
   useEffect(function() {carregarDadosApi()}, []) //Protege o array e ele será renderizado uma única vez.
-
-  return (
+  
+      return (
     <>
       <div className="cards-list">
         <Header />
         {itens.map(function(item, index) {
           return <Card key={index} item={item} list={itens} />
         })}
-        
+
       </div>
     </>
   );
