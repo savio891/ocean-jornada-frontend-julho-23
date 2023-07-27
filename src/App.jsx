@@ -9,23 +9,27 @@ function App() {
   const [itens, setItens] = useState([])
 
   async function carregarDadosApi() {
-    const apiUrl = "https://ocean-api-itens.onrender.com/itens";
+    const apiUrl = "https://rickandmortyapi.com/api/character";
   
     const response = await fetch(apiUrl);
     const body = await response.json();
 
     setItens(body)
+    console.log(body.results)
   }
 
-  useEffect(function() {carregarDadosApi()}, []) //Protege o array e ele será renderizado uma única vez.
   
+  useEffect(function() {carregarDadosApi()}, []) //Protege o array e ele será renderizado uma única vez.
+
       return (
     <>
       <div className="cards-list">
         <Header />
-        {itens.map(function(item, index) {
-          return <Card key={index} item={item} list={itens} />
-        })}
+        { 
+          body.results.map((item, index) => {
+            return <Card key={index} item={item} />
+          })
+        }
 
       </div>
     </>
